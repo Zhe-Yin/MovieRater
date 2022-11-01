@@ -1,18 +1,13 @@
 package com.example.movierater
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
 import android.widget.LinearLayout
-import android.widget.RadioButton
 import android.widget.RadioGroup
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import com.example.movierater.databinding.ActivityAddMovieBinding
-import com.example.movierater.Movie
-import java.time.LocalDate
+import java.text.SimpleDateFormat
 import java.time.format.DateTimeFormatter
 import java.util.*
 
@@ -58,9 +53,10 @@ class AddMovie : AppCompatActivity() {
 
             }else{
                 try{
-//
-                    var formatter = DateTimeFormatter.ofPattern("dd-MMMM-yyyy")
-                    var formattedDate = date.toString().format(formatter)
+                    val pattern = "yyyy-MM-dd"
+                    val simpleDateFormat = SimpleDateFormat(pattern)
+                    val date: String = simpleDateFormat.format(date.toString())
+                    println(date)
                 }catch(e:Exception){
                     date.error = "Date format is wrong (dd-mm-yyyy)"
                     haschk = false
