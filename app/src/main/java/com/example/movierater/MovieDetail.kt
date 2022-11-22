@@ -19,7 +19,7 @@ class MovieDetail : AppCompatActivity() {
             //set actionbar title
             actionbar!!.title = "MovieRater"
 
-            var m = Movie()
+            var m = Movie("Venom","Overview","English","19-10-2018",false)
             title.text = m.title
             overview.text = m.desc
             language.text = m.language
