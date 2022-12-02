@@ -1,9 +1,9 @@
 package com.example.movierater
 
 class Movie(
-    title:String,
-    desc:String,
-    language:String,
-    date:String,
-    below13:Boolean
+    var title:String,
+    var desc:String,
+    var language:String,
+    var date:String,
+    var below13:Boolean
 )

@@ -13,8 +13,8 @@ class Rating : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
         binding.apply{
-//            var m = Movie()
-//            name.text = m.title
+            var m = Movie("Venom","Overview","English","19-10-2018",true)
+            nameET.text = m.title
         }
     }
 

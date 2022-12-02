@@ -53,10 +53,9 @@ class AddMovie : AppCompatActivity() {
 
             }else{
                 try{
-                    val pattern = "yyyy-MM-dd"
-                    val simpleDateFormat = SimpleDateFormat(pattern)
-                    val date: String = simpleDateFormat.format(date.toString())
-                    println(date)
+                    val format = SimpleDateFormat("dd-MM-yyyy")
+                    format.setLenient(false);
+                    format.parse(date.text.toString());
                 }catch(e:Exception){
                     date.error = "Date format is wrong (dd-mm-yyyy)"
                     haschk = false
